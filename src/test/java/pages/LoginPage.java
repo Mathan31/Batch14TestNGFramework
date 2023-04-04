@@ -47,8 +47,8 @@ public class LoginPage extends BaseClass{
 		return result;
 	}
 
-//	public RegistrationPage clickOnRegistrationLink() {
-//		oWrap.click(driver.findElement(oRegisterLink));
-//		return new RegistrationPage(driver,node);
-//	}
+	public RegistrationPage clickOnRegistrationLink() {
+		driver.findElement(oRegisterLink).click();
+		return new RegistrationPage();
+	}
 }

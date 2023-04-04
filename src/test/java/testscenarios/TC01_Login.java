@@ -26,9 +26,14 @@ public class TC01_Login extends BaseClass{
 		Assert.assertTrue(result);
 	}
 	
-	//@Test(priority = 3)
+	@Test(priority = 3)
 	public void loginWithInValidateCredential() {
-		
+		boolean result = new LoginPage()
+		.enterUserName("Mathan")
+		.enterPassword("Testing321")
+		.clickOnSignInButtonWithInvalid()
+		.validateLoginFailedText();
+		Assert.assertTrue(result);
 	}
 
 }
